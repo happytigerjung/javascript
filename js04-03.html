@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>js 4-3t</title>
     <script>
-        // 계산기 사픽연산 함수 만들기
+        // 계산기 사칙연산 함수 만들기
         // 1번 함수 형태
         console.log("=======1번 형태 함수=========");
         
@@ -57,7 +57,7 @@
             console.log("두 수의 빼기"+(a-b));
         }
 
-        function muti2(a,b){
+        function multi2(a,b){
             console.log("두 수의 곱"+(a*b));
         }
 
@@ -74,39 +74,39 @@
 
         function add3(){
             var a=10;
-            var b=6;
+            var b=5;
             return a+b;
         }
 
         function sub3(){
             var a=10;
-            var b=6;
+            var b=5;
             return a-b;
         }
 
         function multi3(){
             var a=10;
-            var b=6;
+            var b=5;
             return a*b;
         }
 
         function div3(){
             var a=10;
-            var b=6;
+            var b=5;
             return a/b;
         }
 
         var add3Result=add3();
-        console.log("두 수의 합"+(a+b));
+        console.log("두 수의 합"+add3Result);
 
-        var add3Result=sub3();
-        console.log("두 수의 빼기"+(a-b));
+        var sub3Result=sub3();
+        console.log("두 수의 빼기"+sub3Result);
 
-        var add3Result=multi3();
-        console.log("두 수의 곱"+(a*b));
+        var multi3Result=multi3();
+        console.log("두 수의 곱"+multi3Result);
 
-        var add3Result=div3();
-        console.log("두 수의 나누기"+(a/b));
+        var div3Result=div3();
+        console.log("두 수의 나누기"+div3Result);
 
 
 
@@ -129,17 +129,98 @@
             return a/b;
         }
 
-        var add3Result=add4();
-        console.log("두 수의 합"+(a+b));
+        var add4Result=add4(10,5);
+        console.log("두 수의 합"+add4Result);
 
-        var add3Result=sub4();
-        console.log("두 수의 빼기"+(a-b));
+        var sub4Result=sub4(10,5);
+        console.log("두 수의 빼기"+sub4Result);
 
-        var add3Result=multi4();
-        console.log("두 수의 곱"+(a*b));
+        var multi4Result=multi4(10,5);
+        console.log("두 수의 곱"+multi4Result);
 
-        var add3Result=div4();
-        console.log("두 수의 나누기"+(a/b));
+        var div4Result=div4(10,5);
+        console.log("두 수의 나누기"+div4Result);
+
+
+        // 문제 4)사용자 입력(숫자)를 받아서 해당하는 단수의 구구단을 출력하는
+        // 프로그램을 작성하세요
+        // 구구단 부분이 함수로 만들어져야함
+
+        
+        var gu1=prompt("숫자를 입력하세요");
+
+
+        function gugu(){
+            gu=gu1;            
+        }
+        for(var gu2=1; gu2<10; gu2++){
+            console.log(gu1+"x"+gu2+"="+gu1*gu2);
+    }
+
+
+
+
+        // 문제 5) 매개변수를 3개를 받는 함수 하나를 생성하여 입력된 기호에 따라
+        // 사칙연산을 진행하는 프로그램을 작성하세요
+        // 첫번째, 두번재 매개변수는 계산할 데이터
+        // 세번째 매개변수는 사칙연산을 위한 기호
+
+        
+        console.log("=======문제 5========");
+
+
+        var a1=prompt("숫자입력");
+        a1=Number(a1);
+        var b1=prompt("숫자입력2");
+        b1=Number(b1);
+        var c1=prompt("기호입력");
+        
+        function Q1(a,b,c){
+            var d;
+            if (c == '+') {
+                d = a + b;
+            }
+            else if (c == '-') {
+                d = a - b;
+
+            }
+            else if (c == '*'){
+                d = a * b;
+            }
+            else if (c == '/'){
+                d = a / b;
+            }
+
+            return d;
+
+        }
+        var dab=Q1(a1,b1,c1);
+
+        console.log(dab);
+
+
+
+        console.log("============");
+
+        var num=prompt("숫자를 입력하세요");
+
+        // isNaN() 은 숫자가 아니면 true
+
+        if(isNaN()==true){
+            // 숫자가 아닐떄
+            console.log("숫자가 입력되지 않음");
+
+        }
+        else{
+            // 숫자일때
+            num=parseInt(num);
+            //num=Number(num);
+            console.log(num*num);
+
+        }
+
+
+
 
 
         
