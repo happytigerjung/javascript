@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js 4-1</title>
+    <!-- 다중 반복문 -->
+    <!-- 하나의 반복문 안에 또 다른 반복문을 사용하는 형태 -->
+    <!-- for (첫번째 초기화 변수; 첫번째 반복조건; 첫번째 카운트){
+        반복 실행할 소스 코드
+             첫번재 for 문에서 반복 실행할 소스코드
+        for (두번째 초기화 변수; 두번재 반복 조건; 두번재 카운트){
+            두번째 for 문에서 반복 실행할 소스코드
+        }
+    } -->
+    <script>
+    for (var i=0; i<10; i++){
+        console.log("------------------");
+        console.log("첫번째 for문의 i값:"+i);
+        console.log("--------------------");
+
+        for(var j=0; j<10; j++){
+            console.log("두번쨰for문의 j값:"+j);
+        }
+
+    }
+
+    //문제 1) 위의 예제를 참고하여 아래와 같이 출력하는 프로그램을 작성하세요
+    // i의 값:x,j의 값:x
+    // i의 값:x1,j의 값y1
+    // 2중 for문을 통해서 출력
+
+    // i의 값:0,j의 값:0
+    // i의 값:0,j의 값:1
+    // i의 값:0,j의 값:2
+
+    // i의 값:1,j의 값:0
+
+
+    // 문제2) 2중 for문을 사용하여 2단부터 0단까지 모든 구구단을 출력하는
+    // 프로그램을 작성하세요
+
+    for(var i=0;i<10;i++){
+        console.log("================");
+
+        for(var j=0; j<10; j++){
+            console.log("i의 값:"+i+"j 의 값:"+j);
+            console.log("-------------");
+        }
+
+    }
+
+
+    for(var gu=2; gu<10; gu++){
+        console.log("======="+gu+"=======");
+
+        for(var g=1; g<10; g++){
+            console.log(gu+"x"+g+"="+gu*g);
+        }
+    }
+
+    console.log("--------------------------");
+
+    // 문제3) 구구단 전체를 while문을 통해서 화면에 출력하세요
+
+    var g1=2;
+    var g2=1;
+    while(g1<=9){
+        
+        console.log("======"+g1+"=====");
+        // var g2=1;
+        while(g2<=9){
+            console.log(g1+"x"+g2+"="+g1*g2);
+            
+            g2++;
+        }
+        g2=1;
+        g1++;
+        
+    }
+
+
+
+
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>
